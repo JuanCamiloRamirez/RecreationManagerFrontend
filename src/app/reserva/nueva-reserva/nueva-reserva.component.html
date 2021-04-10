@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" placeholder="Nombre" id="nombre" name="nombre" 
+                    [(ngModel)]="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" class="form-control" placeholder="Apellido" id="apellido" name="apellido" 
+                    [(ngModel)]="apellido" required>
+                </div>
+                <div class="form-group">
+                    <label for="nroDocumento">Número documento</label>
+                    <input type="number" class="form-control"  id="nroDocumento" name="nroDocumento" 
+                    [(ngModel)]="nroDocumento" required>
+                </div>
+                <div class="form-group">
+                    <label for="inicioFecha">Inicio fecha</label>
+                    <input type="text" class="form-control" placeholder="DD/MM/AAAA" id="inicioFecha" name="inicioFecha" 
+                    [(ngModel)]="inicioFecha" required>
+                </div>
+                <div class="form-group">
+                    <label for="finFecha">Fin fecha</label>
+                    <input type="text" class="form-control" placeholder="DD/MM/AAAA" id="finFecha" name="finFecha" 
+                    [(ngModel)]="finFecha" required>
+                </div>
+                <div class="form-group">
+                    <label for="alojamiento">Alojamiento</label>
+                    <input type="text" class="form-control" placeholder="CabañaXXX" id="alojamiento" name="alojamiento" 
+                    [(ngModel)]="alojamiento" required>
+                </div>
+                <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Crear</button>
+            </form>
+        </div>
+    </div>
+
+
+</div>
+
