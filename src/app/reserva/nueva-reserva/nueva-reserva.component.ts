@@ -31,15 +31,15 @@ export class NuevaReservaComponent implements OnInit {
       this.reservaService.save(reserva).subscribe(
         data=>{
           this.toastr.success('Reserva creada', 'Ok',{
-            timeOut: 3000
+            timeOut: 3000, positionClass: 'toast-top-center'
           });
           this.router.navigate(['/'])
         },
         err=>{
           this.toastr.error(err.error.message, 'Fail',{
-            timeOut: 3000, positionClass: 'toast-top-center',
+            timeOut: 3000, positionClass: 'toast-top-center'
           });
-          this.router.navigate(['/'])
+          //this.router.navigate(['/'])
         }
       )
   }
